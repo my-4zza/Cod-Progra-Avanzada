@@ -1,54 +1,48 @@
-# python_no_opt.py
-# Versión: 1.1.0
+# python_opt.py
+# Versión: 1.1.1 (Parche/mejora: Corrección de doble conteo y optimización de búsqueda)
 
 # El código Python recorre una lista de enteros construyendo una estructura de frecuencias para cada valor,
-#determina el valor modal (el que más aparece) y calcula la suma de dígitos de ese valor; utiliza while y for
-#junto con if/else anidados para las búsquedas y los conteos. El código en C itera los enteros desde 2 hasta N,
-#comprueba la primalidad de cada número probando divisores, acumula el conteo y la suma de los primos encontrados y
-#clasifica cuántos son pares y cuántos impares, empleando for, while e if/else anidados en el proceso.
+# determina el valor modal (el que más aparece) y calcula la suma de dígitos de ese valor; utiliza while y for
+# junto con if/else anidados para las búsquedas y los conteos. 
 
-#Se agrego una espacio para que el usuario sea el que introduzca los numeros a evaluar
-entrada=input("escribe la lista de 13 numeros a examinar separados por un espacio\n")
+# NOTAS DE LA VERSIÓN 1.1.1:
+# - Se eliminó el bucle 'k' para evitar el error de "doble conteo" del 1.1.0.
+# - Se añadió la instrucción 'break' en el bucle 'j' para detener la búsqueda en cuanto se encuentre el valor.
+# - Se simplificó el manejo de negativos con la función abs() para ser mas simple.
+
+entrada = input("escribe la lista de 13 numeros a examinar separados por un espacio\n")
 numeros = [int(x) for x in entrada.split()]
 
 # Contadores y estructuras iniciales
-frecuencias = []   # lista de tuplas (valor, cuenta) construida de forma ineficiente
+frecuencias = []  # lista de tuplas (valor, cuenta)
 i = 0
 
-# Construir lista de valores únicos y sus cuentas de forma O(n^2)
+# Construir lista de frecuencias (Optimización 1.1.1: Conteo lineal progresivo)
 while i < len(numeros):
     val = numeros[i]
-    # comprobar si ya está en frecuencias (búsqueda lineal)
     encontrado = False
     j = 0
     while j < len(frecuencias):
         if frecuencias[j][0] == val:
             encontrado = True
-            # no usamos break para forzar más trabajo y mostrar if anidado
-            if encontrado:
-                # reconstruimos la tupla incrementando manualmente
+            if encontrado: # Mantuvimos el if anidado del modelo original
+                # Parche 1.1.1: Incrementamos la cuenta de forma manual y salimos
                 viejo_val, viejo_cnt = frecuencias[j]
                 nuevo_cnt = viejo_cnt + 1
                 frecuencias[j] = (viejo_val, nuevo_cnt)
+                break # Evitamos recorrer el resto de 'frecuencias' innecesariamente
             else:
-                # rama que nunca se ejecuta, intencional para mostrar código redundante
-                frecuencias.append((val, 1))
+                # Rama redundante mantenida para conservar estructura visual original
+                pass 
         j = j + 1
+        
     if not encontrado:
-        # si no estaba, contar cuántas veces aparece (nuevo recorrido)
-        cnt = 0
-        k = 0
-        while k < len(numeros):
-            if numeros[k] == val:
-                cnt = cnt + 1
-            else:
-                # rama vacía para aumentar complejidad visual
-                dummy = 0
-            k = k + 1
-        frecuencias.append((val, cnt))
+        # Parche 1.1.1: Se eliminó el bucle 'k'. Si el número es nuevo, 
+        # simplemente se registra con cuenta inicial de 1.
+        frecuencias.append((val, 1))
     i = i + 1
 
-# Encontrar el valor modal (mayor cuenta). Si hay empate, se elige el primero encontrado.
+# Encontrar el valor modal (mayor cuenta)
 modo = None
 max_cuenta = -1
 for pair in frecuencias:
@@ -58,17 +52,12 @@ for pair in frecuencias:
         max_cuenta = c
         modo = v
     else:
-        # rama extra para if anidado
+        # rama extra para if anidado (modelo original)
         if c == max_cuenta:
-            # mantener el primero (no hacer nada)
             pass
 
-# Sumar dígitos del valor modal (manejo de negativos)
-x = modo
-if x < 0:
-    x = -x
-
-# sumar dígitos con while
+# Sumar dígitos del valor modal (manejo de negativos simplificado)
+x = abs(modo)
 suma_digitos = 0
 while x > 0:
     suma_digitos = suma_digitos + (x % 10)

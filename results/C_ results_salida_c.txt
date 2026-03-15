@@ -26,3 +26,15 @@ Notas del parche:
 El resultado en la ventana se mantiene igual que en la version anterior
 Los cambios consistieron en eliminar y reescrbir librerias,operadores logicos y operadores de flujo
 Para que el codigo no consuma memoria que no debe
+
+
+codigo optimizado en Python version 1.1.2
+Primos encontrados: 168
+Suma de primos: 76127
+Primos pares: 1
+Primos impares: 167
+
+notas:
+el resultado se ve igual pero en el codigo aparece con menos texto y lineas de codigo 
+los codigos se basan en la reducción de lineas y la reducción de texto asi simplificamos más 
+tambien nos sirve la reducir el consumo de datos de la memoria 

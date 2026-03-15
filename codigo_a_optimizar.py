@@ -13,7 +13,6 @@
 # - Se optimizó la suma de dígitos utilizando una expresión generadora más eficiente.
 # - Se añadió un bloque try-except para el manejo de errores en la entrada de datos.
 
-
 from collections import Counter
 
 # Entrada de datos
@@ -24,7 +23,7 @@ except ValueError:
     print("Error: Asegúrate de ingresar solo números enteros.")
     exit()
 
-# OPTIMIZACIÓN MAJOR (v2.0.0)
+# OPTIMIZACIÓN (v2.0.0)
 # Usamos Counter (basado en Hash Map) para contar en tiempo lineal O(n)
 # Esto reemplaza los bucles while anidados que eran O(n^2)
 conteos = Counter(numeros)

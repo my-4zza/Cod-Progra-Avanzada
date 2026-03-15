@@ -11,6 +11,7 @@ Este archivo registra la evolución de las optimizaciones aplicadas a los códig
 | 1.1.0 | 14/03/2026 | Antonio Portilla Duran | `Codigo_a_optimizar.c` | Mejoras para optimizar el codigo original, implementacion de brake y modificaciones en instrucciones for, while e if. |
 | 1.1.0 | 14/03/2026 | Alegria Ponce Jose Santiago | `Codigo_a_optimizar.py` | Se agrego una entrada para que el usuario digite los numeros que quiere evaluar. |
 | 1.1.1 | 14/03/2026 | Alegria Ponce Jose Santiago | `Codigo_a_optimizar.C` | Eliminacion de librerias no necesarias, elimine un else al final que era redundante y al ultimo if y prints reduje operadores. |
+| 1.1.1 | 14/03/2026 | Alarcón Galván Jimmy Loucioss | `Código_a_optimizar.py` | Eliminación de bucle k para corregir el error de doble conteo y optimización de búsqueda con la instrucción break. |
 
 ## Integrantes del Equipo
 * Alarcón Galván Jimmy Loucioss

@@ -1,0 +1,7 @@
+ENTRADA (Lo que el usuario teclea):
+3 -1 0 5 -7 0 2 3 3 -1 5 5 5
+
+SALIDA ESPERADA:
+Frecuencias: [(3, 3), (-1, 2), (0, 2), (5, 4), (-7, 1), (2, 1)]
+Modo: 5 con cuenta: 4
+Suma de dígitos del modo: 5

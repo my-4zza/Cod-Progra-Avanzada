@@ -9,6 +9,8 @@ Este archivo registra la evolución de las optimizaciones aplicadas a los códig
 | 1.0.0 | 14/03/2026 | Alfredo Cid Garcia | `Codigo_a_optimizar.py` | Se puso el codigo base de python para que mis compañeros lo vayan mejorando. |
 | 1.0.0 | 14/03/2026 | Alfredo Cid Garcia | `Codigo_a_optimizar.c` | Se puso el codigo base de c para que mis compañeros lo vayan mejorando. |
 | 1.1.0 | 14/03/2026 | Antonio Portilla Duran | `Codigo_a_optimizar.c` | Mejoras para optimizar el codigo original, implementacion de brake y modificaciones en instrucciones for, while e if. |
+| 1.1.0 | 14/03/2026 | Alegria Ponce Jose Santiago | `Codigo_a_optimizar.py` | Se agrego una entrada para que el usuario digite los numeros que quiere evaluar. |
+
 
 ## Integrantes del Equipo
 * Alarcón Galván Jimmy Loucioss

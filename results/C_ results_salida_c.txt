@@ -13,3 +13,16 @@ Salto de números pares (m = m + 2).
 Límite de búsqueda hasta la raíz cuadrada (d * d <= m).
 Uso de 'break' para detención temprana.
 El resultado matemático se mantiene igual, pero con un menor consumo de la cpu y ejecucion.
+
+Codigo optimizado 1.1.1
+Salida de la consola:
+
+Primos encontrados: 168
+Suma de primos: 76127
+Primos pares: 1
+Primos impares: 167
+
+Notas del parche:
+El resultado en la ventana se mantiene igual que en la version anterior
+Los cambios consistieron en eliminar y reescrbir librerias,operadores logicos y operadores de flujo
+Para que el codigo no consuma memoria que no debe

@@ -1,0 +1,8 @@
+ENTRADA: 
+N = 2000 (Modificado en el código base)
+
+SALIDA ESPERADA:
+Primos encontrados: 303
+Suma de primos: 277050
+Primos pares: 1
+Primos impares: 302

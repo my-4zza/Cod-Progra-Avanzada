@@ -1,5 +1,5 @@
 # python_no_opt.py
-# Versión: 1.0.0
+# Versión: 1.1.0
 
 # El código Python recorre una lista de enteros construyendo una estructura de frecuencias para cada valor,
 #determina el valor modal (el que más aparece) y calcula la suma de dígitos de ese valor; utiliza while y for
@@ -7,8 +7,9 @@
 #comprueba la primalidad de cada número probando divisores, acumula el conteo y la suma de los primos encontrados y
 #clasifica cuántos son pares y cuántos impares, empleando for, while e if/else anidados en el proceso.
 
-
-numeros = [3, -1, 0, 5, -7, 0, 2, 3, 3, -1, 5, 5, 5]  # ejemplo; en práctica puede venir de input
+#Se agrego una espacio para que el usuario sea el que introduzca los numeros a evaluar
+entrada=input("escribe la lista de 13 numeros a examinar separados por un espacio\n")
+numeros = [int(x) for x in entrada.split()]
 
 # Contadores y estructuras iniciales
 frecuencias = []   # lista de tuplas (valor, cuenta) construida de forma ineficiente

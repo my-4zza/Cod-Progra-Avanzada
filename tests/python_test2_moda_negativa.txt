@@ -1,0 +1,6 @@
+ENTRADA:
+-45 2 2 -45 -45 8
+
+SALIDA ESPERADA:
+Modo: -45 con cuenta: 3
+Suma de dígitos del modo: 9

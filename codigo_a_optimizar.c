@@ -5,37 +5,33 @@
 // Autor: Alegria ponce jose santiago
 //Eliminacion de librerias no necesarias, elimine un else al final que era redundante y al ultimo if y prints reduje operadores
 // declare variables a otro tipo (long long)
-#include <stdio.h>
+N = 1000
+count = 0
+pares = 0
+impares = 0
+suma = 0
 
-int main() {
-    int N = 1000;
-    int i, j;
-    int count = 0, pares = 0, impares = 0;
-    long long suma = 0;
+for i in range(2, N + 1):
 
-    for (i = 2; i <= N; i++) {
-        int primo = 1;
+    primo = True
 
-        for (j = 2; j * j <= i; j++) {
-            if (i % j == 0) {
-                primo = 0;
-                break;
-            }
-        }
-        if (primo) {
-            count++;
-            suma += i;
+    j = 2
+    while j * j <= i:
+        if i % j == 0:
+            primo = False
+            break
+        j += 1
 
-            if (i % 2 == 0)
-                pares++;
-            else
-                impares++;
-        }
-    }
-    printf("Primos encontrados: %d\n", count);
-    printf("Suma de primos: %lld\n", suma);
-    printf("Primos pares: %d\n", pares);
-    printf("Primos impares: %d\n", impares);
+    if primo:
+        count += 1
+        suma += i
 
-    return 0;
-}
+        if i % 2 == 0:
+            pares += 1
+        else:
+            impares += 1
+
+print("Primos encontrados:", count)
+print("Suma de primos:", suma)
+print("Primos pares:", pares)
+print("Primos impares:", impares)

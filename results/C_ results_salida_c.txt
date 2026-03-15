@@ -1,0 +1,11 @@
+Codigo original. 1.0.0 
+Salida de la consola y resultados. 
+Ejecución de .c Sin optimizar:
+
+Primos encontrados: 168
+Suma de primos: 76127
+Primos pares: 1
+Primos impares: 167
+
+Nota:
+Esta versión utiliza una comprobación lenta, consume mucho mas tiempo de ejecucion por la logica establecida

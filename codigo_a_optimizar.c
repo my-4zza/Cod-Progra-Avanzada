@@ -1,20 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdio.h>
 
-// c_no_opt.c v1.1.0
-
-// version: 1.1.0
-// Autor: Antonio Portilla
-// Mejoras pequeñas para optimizar el codigo original
-
-// implementacion de break y modificacion en for.
+// c_no_opt.c v1.1.1
+// version: 1.1.1
+// Autor: Alegria ponce jose santiago
+//Eliminacion de librerias no necesarias, elimine un else al final que era redundante y al ultimo if y prints reduje operadores
+// declare variables a otro tipo (long long)
 int main() {
     int N = 1000;
-    int count_primos = 0;
+    int count_primos = 0, primos_pares = 0, primos_impares = 0;
     long long suma_primos = 0;
-    int primos_pares = 0;
-    int primos_impares = 0;
 
     if (N >= 2) { // mejora para poder saltar los demas pares
         count_primos = 1;
@@ -35,18 +29,14 @@ int main() {
         }
 
         if (es_primo) {
-            count_primos = count_primos + 1;
-            suma_primos = suma_primos + m;
-            primos_impares = primos_impares + 1;
-        } else {
-            // rama para números compuestos
-            int z = 0;
-            z = z + 1;
+            count_primos++;
+            suma_primos += m;
+            primos_impares++;
         }
     }
-    printf("Primos encontrados: %d\n", count_primos);
+   printf("Primos encontrados: %d\n", count_primos);
     printf("Suma de primos: %lld\n", suma_primos);
-    printf("Primos pares.:%d\n", primos_pares);
+    printf("Primos pares: %d\n", primos_pares);
     printf("Primos impares: %d\n", primos_impares);
 
     return 0;

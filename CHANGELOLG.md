@@ -6,8 +6,8 @@ Este archivo registra la evolución de las optimizaciones aplicadas a los códig
 
 | Versión | Fecha | Autor | Archivo | Descripción de la Optimización |
 | :--- | :--- | :--- | :--- | :--- |
-| 1.1.0 | 14/03/2026 | Alfredo Cid Garcia | `Codigo_a_optimizar.py` | Se puso el codigo base de python para que mis compañeros lo vayan mejorando. |
-| 1.1.0 | 14/03/2026 | Alfredo Cid Garcia | `Codigo_a_optimizar.c` | Se puso el codigo base de c para que mis compañeros lo vayan mejorando. |
+| 1.0.0 | 14/03/2026 | Alfredo Cid Garcia | `Codigo_a_optimizar.py` | Se puso el codigo base de python para que mis compañeros lo vayan mejorando. |
+| 1.0.0 | 14/03/2026 | Alfredo Cid Garcia | `Codigo_a_optimizar.c` | Se puso el codigo base de c para que mis compañeros lo vayan mejorando. |
 
 ## Integrantes del Equipo
 * Alarcón Galván Jimmy Loucioss

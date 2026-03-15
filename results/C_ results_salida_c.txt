@@ -1,11 +1,15 @@
-Codigo original. 1.0.0 
+Codigo optimizado. 1.1.0 
 Salida de la consola y resultados. 
-Ejecución de .c Sin optimizar:
+Ejecución de .c optimizado:
 
 Primos encontrados: 168
 Suma de primos: 76127
 Primos pares: 1
 Primos impares: 167
 
-Nota:
-Esta versión utiliza una comprobación lenta, consume mucho mas tiempo de ejecucion por la logica establecida
+Nota de optimización: 
+Se ha mejorado la rapidez de ejecución mediante:
+Salto de números pares (m = m + 2).
+Límite de búsqueda hasta la raíz cuadrada (d * d <= m).
+Uso de 'break' para detención temprana.
+El resultado matemático se mantiene igual, pero con un menor consumo de la cpu y ejecucion.
